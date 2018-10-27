@@ -6,7 +6,6 @@ Created on Sat Oct 27 10:17:03 2018
 @author: smitrao
 """
 
-import mathplotlib as mpl
 import pandas as pd
 import numpy as np
 import csv
@@ -18,6 +17,8 @@ with open('ksi.csv', newline='') as csvfile:
     spamreader = csv.DictReader(csvfile)
     i = 0
     for row in spamreader:
+        if i > 3:
+            break
         print(row)
-        break
-    print(i)
+        i+=1
+    
